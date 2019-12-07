@@ -7,20 +7,8 @@ class ProductPage(BasePage):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.add_to_basket_button)
         add_to_basket_button.click()
 
-    def should_be_expected_quantity(self, expected_quantity):
-         # we add only one book
-        actual_quantity = self.browser.find_element(*ProductPageLocators.actual_quantity).text
-        assert expected_quantity == actual_quantity, f'expected {expected_quantity}, actual {actual_quantity}'
-
-    def should_be_expected_price(self, expected_price):
-        # with price 9.99S
-        actual_price = self.browser.find_element(*ProductPageLocators.actual_price)
-        assert expected_price == actual_price, f"expected {expected_price}, actual {actual_price}"
-
-    def should_be_expected_name(self, expected_name):
-        # with the same name
-        actual_name = self.browser.find_element(*ProductPageLocators.actual_name).text
-        assert expected_name == actual_name, f"expected {expected_name}, actual {actual_name}"
+    def should_not_be_expected_name(self, expected_name):
+        assert self.is_not_element_present(*ProductPageLocators.expected_name), "Product is presented, but should not be"
 
     def search(self, searching_name):
         search_input =  self.browser.find_element(*MainPageLocators.SEARCH_INPUT)
