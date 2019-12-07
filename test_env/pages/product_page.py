@@ -8,7 +8,7 @@ class ProductPage(BasePage):
         add_to_basket_button.click()
 
     def should_not_be_expected_name(self, expected_name):
-        assert self.is_not_element_present(*ProductPageLocators.expected_name), "Product is presented, but should not be"
+        assert self.is_not_element_present(*ProductPageLocators.actual_name), "Product is presented, but should not be"
 
     def search(self, searching_name):
         search_input =  self.browser.find_element(*MainPageLocators.SEARCH_INPUT)
