@@ -1,4 +1,7 @@
 from .pages.main_page import MainPage
+import pytest
+
+link = "http://selenium1py.pythonanywhere.com/"
 
 @pytest.mark.need_review_custom_scenarios
 def test_guest_can_go_to_login_page(browser):
