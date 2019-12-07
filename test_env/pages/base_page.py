@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
 
 class BasePage():
     def __init__(self, browser, url):
