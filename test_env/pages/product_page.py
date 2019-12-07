@@ -43,6 +43,5 @@ class ProductPage(BasePage):
     def should_be_successful_message(self):
          assert self.is_element_present(*ProductPageLocators.successful_message), "Successful message is not presented"
 
-    def add_product_to_fav(self):
-        add_to_fav_button = self.browser.find_element(*ProductPageLocators.add_to_fav)
-        add_to_fav_button .click()
+    def should_be_fav_button(self):
+        assert self.is_element_present(*ProductPageLocators.add_to_fav), "Add to favourite button is not presented"
