@@ -13,7 +13,7 @@ class ProductPageLocators():
     actual_name = (By.CSS_SELECTOR, "div.col-sm-4 > h3 > a")
     product_img = (By.CSS_SELECTOR, 'article > div.image_container > a > img')
     successful_message = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div')
-    add_to_fav = (By.CSS_SELECTOR, "button[type = 'submit'].btn-lg:nth-child(2)")
+    add_to_fav = (By.CSS_SELECTOR, "div.col-sm-6.product_main > div > a")
 
 class LoginPageLocators():
     email_input = (By.ID, 'id_login-username')
